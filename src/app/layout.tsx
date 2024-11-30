@@ -1,3 +1,5 @@
+import Header from "./ui/header/header";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -5,7 +7,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
