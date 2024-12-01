@@ -80,7 +80,7 @@ const Header = () => {
 
             {/* Flyout menu */}
             {productMenuOpen && (
-              <div className="absolute left-0 top-full mt-2 w-80 bg-white shadow-lg rounded-lg ring-1 ring-gray-900/5">
+              <div className="absolute left-0 top-full mt-2 w-80 bg-white shadow-lg rounded-lg ring-1 ring-gray-900/5 z-50">
                 <div className="p-4">
                   <div className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50">
                     <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
@@ -123,8 +123,8 @@ const Header = () => {
       {/* Mobile menu */}
       {mobileMenuOpen && (
         <div className="lg:hidden" role="dialog" aria-modal="true">
-          <div className="fixed inset-0 z-10"></div>
-          <div className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <div className="fixed inset-0 z-10 bg-black opacity-50"></div>
+          <div className="fixed inset-y-0 right-0 z-20 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
               <Link href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">WARD</span>

@@ -17,18 +17,16 @@ export default function CarouselPlugin() {
   );
 
   return (
-    <div>
+    <div className="w-full h-full">
       <Carousel
         plugins={[plugin.current]}
-        className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 h-64"
-        onMouseEnter={plugin.current.stop}
-        onMouseLeave={plugin.current.reset}
+        className="w-full h-full sm:h-64 md:h-96 lg:h-auto"
       >
         <CarouselContent>
           {Array.from({ length: 2 }).map((_, index) => (
             <CarouselItem key={index}>
               <div className="p-1">
-                <Card>
+                <Card className="w-full h-full">
                   <Image
                     src={`/CarouselPlugin${index + 1}.jpg`}
                     alt={`Slide ${index + 1}`}
@@ -40,13 +38,12 @@ export default function CarouselPlugin() {
                       height: "100%",
                       borderRadius: "8px",
                     }}
-                  ></Image>
+                  />
                 </Card>
               </div>
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
       </Carousel>
     </div>
   );
