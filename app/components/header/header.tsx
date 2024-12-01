@@ -15,7 +15,7 @@ const Header = () => {
         aria-label="Global"
       >
         <div className="flex lg:flex-1 items-center">
-          <Link href="#" className="-m-1.5 p-1.5 flex items-center">
+          <Link href="/" className="-m-1.5 p-1.5 flex items-center">
             <Image
               className="h-12 w-auto"
               src="/logo.png"
@@ -93,7 +93,7 @@ const Header = () => {
                     </div>
                     <div className="flex-auto">
                       <Link
-                        href="#"
+                        href="/"
                         className="block font-semibold text-gray-900"
                       >
                         Комплекс по контролю пружин WARD
@@ -111,10 +111,13 @@ const Header = () => {
             )}
           </div>
 
-          <Link href="#" className="text-sm/6 font-semibold text-gray-900">
+          <Link href="/" className="text-sm/6 font-semibold text-gray-900">
             Оплата
           </Link>
-          <Link href="#" className="text-sm/6 font-semibold text-gray-900">
+          <Link
+            href="/contacts"
+            className="text-sm/6 font-semibold text-gray-900"
+          >
             Контакты
           </Link>
         </div>
@@ -126,7 +129,7 @@ const Header = () => {
           <div className="fixed inset-0 z-10 bg-black opacity-50"></div>
           <div className="fixed inset-y-0 right-0 z-20 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
-              <Link href="#" className="-m-1.5 p-1.5">
+              <Link href="/" className="-m-1.5 p-1.5">
                 <span className="sr-only">WARD</span>
                 <Image
                   className="h-8 w-auto"
@@ -162,19 +165,19 @@ const Header = () => {
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
                   <Link
-                    href="#"
+                    href="/"
                     className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                   >
                     Продукты
                   </Link>
                   <Link
-                    href="#"
+                    href="/"
                     className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                   >
                     Оплата
                   </Link>
                   <Link
-                    href="#"
+                    href="/contacts"
                     className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                   >
                     Контакты
