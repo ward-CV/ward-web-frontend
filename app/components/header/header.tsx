@@ -111,7 +111,10 @@ const Header = () => {
             )}
           </div>
 
-          <Link href="/" className="text-sm/6 font-semibold text-gray-900">
+          <Link
+            href="/payment"
+            className="text-sm/6 font-semibold text-gray-900"
+          >
             Оплата
           </Link>
           <Link
@@ -171,7 +174,7 @@ const Header = () => {
                     Продукты
                   </Link>
                   <Link
-                    href="/"
+                    href="/payment"
                     className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                   >
                     Оплата
