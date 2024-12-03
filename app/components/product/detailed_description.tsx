@@ -7,7 +7,7 @@ const DetailedDescription = () => {
   return (
     <>
       <Card className="border-none shadow-none">
-        <CardHeader>
+        <CardHeader className="pt-0">
           <CardTitle>WARD SPRING</CardTitle>
         </CardHeader>
         <CardContent>
