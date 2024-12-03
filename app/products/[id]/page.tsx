@@ -1,3 +1,5 @@
+import Product from "@/app/components/product/product";
+
 interface ProductPageProps {
   params: { id: string };
 }
@@ -5,11 +7,7 @@ interface ProductPageProps {
 const ProductPage = ({ params }: ProductPageProps) => {
   const { id } = params;
 
-  return (
-    <div>
-      <h1>Информация о продукте {id}</h1>
-    </div>
-  );
+  return <Product />;
 };
 
 export default ProductPage;
