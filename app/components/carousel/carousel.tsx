@@ -3,15 +3,18 @@
 import React from "react";
 import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 
-export default function CarouselPlugin() {
+interface CarouselPluginProps {
+  imagePaths: string;
+}
+
+export default function CarouselPlugin({ imagePaths }: CarouselPluginProps) {
   const plugin = React.useRef(
     Autoplay({ delay: 3000, stopOnInteraction: false })
   );
@@ -28,7 +31,7 @@ export default function CarouselPlugin() {
               <div className="p-1">
                 <Card className="w-full h-full">
                   <Image
-                    src={`/CarouselPlugin${index + 1}.jpg`}
+                    src={`/${imagePaths}${index + 1}.jpg`}
                     alt={`Slide ${index + 1}`}
                     width={1280}
                     height={960}

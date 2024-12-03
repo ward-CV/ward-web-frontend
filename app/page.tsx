@@ -14,7 +14,7 @@ export default function Home() {
       {/* Правая часть с CarouselPlugin */}
       <div className="w-full md:w-1/2 h-full p-8 flex items-center justify-center">
         <div className="w-full h-full flex items-center justify-center">
-          <CarouselPlugin />
+          <CarouselPlugin imagePaths="CarouselPlugin" />
         </div>
       </div>
     </div>
