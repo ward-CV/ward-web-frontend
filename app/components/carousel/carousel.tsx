@@ -25,7 +25,7 @@ export default function CarouselPlugin({ imagePaths }: CarouselPluginProps) {
         plugins={[plugin.current]}
         className="w-full h-full sm:h-64 md:h-96 lg:h-auto"
       >
-        <CarouselContent>
+        <CarouselContent className="p-0">
           {Array.from({ length: 2 }).map((_, index) => (
             <CarouselItem key={index}>
               <div className="p-1">
