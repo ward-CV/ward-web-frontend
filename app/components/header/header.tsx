@@ -1,12 +1,27 @@
 "use client";
 
-import { useState } from "react";
+import { useState, ChangeEvent } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+import { Product } from "@/app/types/product";
 
-const Header = () => {
+interface ProductDropdownProps {
+  products: Product[];
+}
+
+const Header: React.FC<ProductDropdownProps> = ({ products }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [productMenuOpen, setProductMenuOpen] = useState(false);
+
+  const router = useRouter();
+
+  const handleChange = (event: ChangeEvent<HTMLSelectElement>) => {
+    const selectedId = event.target.value;
+    if (selectedId) {
+      router.push(`/products/${selectedId}`);
+    }
+  };
 
   return (
     <header className="bg-white">
@@ -82,30 +97,30 @@ const Header = () => {
             {productMenuOpen && (
               <div className="absolute left-0 top-full mt-2 w-80 bg-white shadow-lg rounded-lg ring-1 ring-gray-900/5 z-50">
                 <div className="p-4">
-                  <div className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50">
-                    <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                      <Image
-                        src="/logo.png"
-                        alt="Logo"
-                        width={32}
-                        height={32}
-                      />
-                    </div>
-                    <div className="flex-auto">
-                      <Link
-                        href="/"
-                        className="block font-semibold text-gray-900"
-                      >
-                        Комплекс по контролю пружин WARD
-                      </Link>
-                      <p className="mt-1 text-gray-600">
-                        Автоматизированный комплекс по контролю пружин. Проводит
-                        измерение, формирует комплекс, записывает данные в базу
-                        данных.
-                      </p>
-                    </div>
-                  </div>
-                  {/* Добавьте другие элементы меню */}
+                  {products.map((product) => (
+                    <Link
+                      key={product.id}
+                      href={`/products/${product.id}`}
+                      className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50"
+                    >
+                      <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                        <Image
+                          src={product.image}
+                          alt={product.name}
+                          width={32}
+                          height={32}
+                        />
+                      </div>
+                      <div className="flex-auto">
+                        <span className="block font-semibold text-gray-900">
+                          {product.name}
+                        </span>
+                        <p className="mt-1 text-gray-600">
+                          {product.description}
+                        </p>
+                      </div>
+                    </Link>
+                  ))}
                 </div>
               </div>
             )}

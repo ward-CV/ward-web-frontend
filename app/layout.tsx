@@ -7,11 +7,21 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const products = [
+    {
+      id: 1,
+      name: "Комплекс по контролю пружин WARD",
+      description:
+        "Автоматизированный комплекс по контролю пружин. Проводит измерение, формирует комплекс, записывает данные в базу данных.",
+      image: "/logo.png",
+    },
+  ];
+
   return (
     <html lang="ru">
       <head />
       <body className="flex flex-col min-h-screen">
-        <Header />
+        <Header products={products} />
         <main className="flex-grow">{children}</main> {/* Main content */}
         <Footer />
       </body>
