@@ -17,7 +17,7 @@ export default function AboutUs() {
         </CardHeader>
         <CardContent>
           <p className="mb-4">
-            Компания была основана в 2010 году с целью улучшения процессов
+            Компания была основана в 2024 году с целью улучшения процессов
             контроля качества в сфере машиностроения.
           </p>
           <p className="mb-4">
@@ -39,7 +39,6 @@ export default function AboutUs() {
             для наших клиентов.
           </p>
         </CardContent>
-        <CardFooter>footer</CardFooter>
       </Card>
     </div>
   );

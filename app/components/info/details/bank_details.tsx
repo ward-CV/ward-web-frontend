@@ -32,7 +32,7 @@ export default function BankDetails() {
           127287, г. Москва, ул. Хуторская 2-я, д. 38А, стр. 26
         </p>
 
-        <Image src="/bank.png" alt="Bank" width={70} height={70} />
+        <Image src="/qr_code.jpg" alt="Bank" width={170} height={170} />
       </CardContent>
     </Card>
   );

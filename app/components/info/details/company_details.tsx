@@ -13,35 +13,35 @@ export default function CompanyDetails() {
       <CardContent>
         <p className="mb-1 text-gray-500">Полное название</p>
         <p className="mb-3 text-black">
-          ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "СЕНСОРИКА"
+          ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "WARD"
         </p>
 
         <p className="mb-1 text-gray-500">Краткое название</p>
-        <p className="mb-3 text-black">ООО "СЕНСОРИКА"</p>
+        <p className="mb-3 text-black">ООО "WARD"</p>
 
         <p className="mb-1 text-gray-500">Генеральный директор</p>
-        <p className="mb-3 text-black">Выплавень Владимир Сергеевич</p>
+        <p className="mb-3 text-black">Суров Данил Павлович</p>
 
         <p className="mb-1 text-gray-500">ИНН</p>
-        <p className="mb-3 text-black">5403075230</p>
+        <p className="mb-3 text-black">4253055375</p>
 
         <p className="mb-1 text-gray-500">КПП</p>
-        <p className="mb-3 text-black">540301001</p>
+        <p className="mb-3 text-black">425301001</p>
 
         <p className="mb-1 text-gray-500">ОГРН</p>
-        <p className="mb-3 text-black">1235400001760</p>
+        <p className="mb-3 text-black">1234200016005</p>
 
         <p className="mb-1 text-gray-500">Основной код ОКВЭД</p>
-        <p className="mb-3 text-black">62.01</p>
+        <p className="mb-3 text-black">26.51.6</p>
 
         <p className="mb-1 text-gray-500">Юридический адрес</p>
         <p className="mb-3 text-black">
-          630033, Новосибирская область, городской округ город Новосибирск,
-          город Новосибирск, улица Аникина, дом 33
+          654063, Кемеровская область - Кузбасс, г. о. Новокузнецкий, г.
+          Новокузнецк, р-н Куйбышевский, ул. Челюскина, д. 51, кв. 16
         </p>
 
         <p className="mb-1 text-gray-500">ОКТМО</p>
-        <p className="mb-3 text-black">50701000</p>
+        <p className="mb-3 text-black">32731000001</p>
       </CardContent>
     </Card>
   );
